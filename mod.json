@@ -1,0 +1,17 @@
+{
+	"geode": "5.9.0",
+	"gd": {
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081",
+		"ios": "2.2081"
+	},
+	"id": "blue-moon-studios.cooooooooooins",
+	"name": "Cooooooooooins!",
+	"version": "v1.0.0",
+	"developer": "Blue Moon Studios",
+	"description": "Why only 3 coins?",
+	"dependencies": {
+		"geode.node-ids": ">=v1.23.3"
+	}
+}
