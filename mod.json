@@ -8,7 +8,7 @@
 	},
 	"id": "blue-moon-studios.cooooooooooins",
 	"name": "Cooooooooooins!",
-	"version": "v1.0.0",
+	"version": "v1.0.1",
 	"developer": "Blue Moon Studios",
 	"description": "Why only 3 coins?",
 	"early-load": true,
@@ -16,6 +16,9 @@
 		"content",
 		"gameplay"
 	],
+	"links": {
+		"source": "https://github.com/BlueMoonStudiosGD/Cooooooooooins"
+	},
 	"resources": {
 		"sprites": [
 			"resources/*.png"

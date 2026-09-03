@@ -1,2 +1,6 @@
+# 1.0.1
+- Full mod rewritte
+- Better code rework! some hooks now looks much better :)
+
 # 1.0.0
-- Edit this file to change your mod's changelog.
+- First release
