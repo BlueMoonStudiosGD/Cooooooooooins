@@ -3,6 +3,7 @@
 using namespace geode::prelude;
 
 #include <Geode/modify/MenuLayer.hpp>
+#include <Geode/modify/OptionsLayer.hpp>
 
 class $modify(MenuLayer) {
     bool init() {
@@ -16,5 +17,15 @@ class $modify(MenuLayer) {
         }
 
         return true;
+    }
+};
+
+class $modify(OptionsLayer) {
+    void customSetup() {
+        
+        OptionsLayer::customSetup();
+
+        m_optionsMenu->removeChildByID("account-button");
+        m_optionsMenu->updateLayout();
     }
 };

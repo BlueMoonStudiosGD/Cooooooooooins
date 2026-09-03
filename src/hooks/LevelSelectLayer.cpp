@@ -23,25 +23,11 @@ class $modify(LevelSelectLayer)
 	m_scrollLayer->m_dots->removeAllObjects();
 
 	
-	std::vector<std::tuple<int, const char*>> levels = {
-		{1, "Stereo Madness"},
-		{2, "Back on Track"},
-		{3, "Polargeist"},
-        {8, "Time Machine"},
-        {13, "Electroman Adventures"},
-        {14, "Clubstep"},
-        {17, "Blast Processing"},
-        {19, "Geometrical Dominator"},
-        {20, "Deadlocked"},
-        {21, "Fingerdash"}
-	};
-
-
+	int mainLevelIDs[10] = { 1, 2, 3, 8, 13, 14, 17, 19, 20, 21 };
 
 	auto GLM = GameLevelManager::sharedState();
-	for (auto [id, name] : levels) {
-		auto level = GLM->getMainLevel(id, true);
-
+	for (int i = 0; i < 10; i++) {
+		auto level = GLM->getMainLevel(mainLevelIDs[i], true);
 		m_scrollLayer->m_dynamicObjects->addObject(level);
 	}
 
@@ -74,9 +60,9 @@ class $modify(LevelSelectLayer)
 
     auto GM = GameManager::sharedState();
     //5, 7, 8, 9, 10, 11, 1, 3, 4, 5, 94, 8
-	int colIDs[11] = { 5, 7, 8, 9, 10, 11, 1, 3, 4, 5, 94};
+	int colIDs[11] = { 5, 7, 8, 9, 10, 11, 1, 3, 4, 5, 94 };
     
 
-    return GM->colorForIdx(colIDs[page % 11]);
+    return GM->colorForIdx(colIDs[page]);
     }
 };

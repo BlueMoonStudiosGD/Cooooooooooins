@@ -58,5 +58,28 @@ class $modify(LevelPage) {
                 sprite->setDisplayFrame(frame);
             } 
         }
+
+        if (level->m_levelID == -1) {
+
+            if (!this->getChildByID("coming-soon-sprite")) {
+                auto sprite = CCSprite::create("coming_soon_2.png"_spr);
+                sprite->setID("coming-soon-sprite");
+                sprite->setScale(1.175f);
+                sprite->setPosition(CCDirector::sharedDirector()->getWinSize()/2);
+                this->addChild(sprite);
+            }
+
+            if (auto label = this->getChildByID("coming-soon-label")) {
+                label->setVisible(false);
+            }
+
+            if (auto doorMenu = this->getChildByID("button-menu")) {
+                doorMenu->setVisible(false);
+            }
+        }
+        else if (auto commingSoonSpr = this->getChildByID("coming-soon-sprite")) {
+            commingSoonSpr->removeFromParent();
+        }
+
     }
 };
