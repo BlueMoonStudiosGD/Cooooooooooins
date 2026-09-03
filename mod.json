@@ -11,6 +11,15 @@
 	"version": "v1.0.0",
 	"developer": "Blue Moon Studios",
 	"description": "Why only 3 coins?",
+	"early-load": true,
+	"resources": {
+		"sprites": [
+			"resources/*.png"
+		],
+		"files": [
+			"resources/levels/*.txt"
+		]
+	},
 	"dependencies": {
 		"geode.node-ids": ">=v1.23.3"
 	}
