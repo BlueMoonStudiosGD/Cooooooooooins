@@ -36,8 +36,10 @@ class $modify(LevelPage) {
         return true;
     }
 
-    void updateDynamicLevelPage(GJGameLevel* level)
+    void updateDynamicPage(GJGameLevel* level)
     {
+        LevelPage::updateDynamicPage(level);
+
         auto gsm = GameStatsManager::sharedState();
          for (int i = 1; i <= m_coins->count(); ++i) {
             

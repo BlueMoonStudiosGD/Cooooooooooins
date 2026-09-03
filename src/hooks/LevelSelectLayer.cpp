@@ -60,10 +60,23 @@ class $modify(LevelSelectLayer)
 
 	m_scrollLayer->updateDots(0.f);
 	m_scrollLayer->updatePages();
-	updatePageWithObject(m_scrollLayer->m_pages->objectAtIndex(pageID),
+	updatePageWithObject(m_scrollLayer->m_pages->objectAtIndex(pageID % m_scrollLayer->m_pages->count()),
 		m_scrollLayer->m_dynamicObjects->objectAtIndex(pageID));
 	m_scrollLayer->repositionPagesLooped();
 
     return true;
 	}
+
+    ccColor3B colorForPage(int pageID) { //taked from gd lunar, thanks cap!
+
+    int count = m_scrollLayer->m_dynamicObjects->count();
+    int page = (count + (pageID % count)) % count;
+
+    auto GM = GameManager::sharedState();
+    //5, 7, 8, 9, 10, 11, 1, 3, 4, 5, 94, 8
+	int colIDs[11] = { 5, 7, 8, 9, 10, 11, 1, 3, 4, 5, 94};
+    
+
+    return GM->colorForIdx(colIDs[page % 11]);
+    }
 };

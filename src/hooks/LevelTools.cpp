@@ -66,7 +66,7 @@ class $modify(LevelTools) {
             level->m_audioTrack = 13;
             level->m_stars = 14;
             level->m_demon = 1;
-            level->m_difficulty = GJDifficulty::DemonEasy;
+            level->m_difficulty = GJDifficulty::Demon;
             level->m_requiredCoins = 0;
             level->m_timestamp = 0;
             level->m_coins = 10;
@@ -94,7 +94,7 @@ class $modify(LevelTools) {
             level->m_audioTrack = 19;
             level->m_stars = 15;
             level->m_demon = 1;
-            level->m_difficulty = GJDifficulty::DemonEasy;
+            level->m_difficulty = GJDifficulty::Demon;
             level->m_requiredCoins = 0;
             level->m_timestamp = 0;
             level->m_coins = 10;
