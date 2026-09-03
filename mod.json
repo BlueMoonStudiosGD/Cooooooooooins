@@ -12,6 +12,10 @@
 	"developer": "Blue Moon Studios",
 	"description": "Why only 3 coins?",
 	"early-load": true,
+	"tags": [
+		"content",
+		"gameplay"
+	],
 	"resources": {
 		"sprites": [
 			"resources/*.png"
@@ -20,7 +24,22 @@
 			"resources/levels/*.txt"
 		]
 	},
+	"settings": {
+		"all-icons": {
+			"name": "All icons",
+			"description": "All icons and colors unlocked by default",
+			"type": "bool",
+			"default": true
+		}
+	},
 	"dependencies": {
 		"geode.node-ids": ">=v1.23.3"
+	},
+	"incompatibilities": {
+		"dankmeme.globed2": "<=1.0.0",
+		"ninxout.redash": "<=1.0.0",
+		"capeling.geometry-dash-lunar": "<=1.0.0",
+		"bitz.hard_mode": "<=1.0.0",
+		"teamtcm.geometry-dash-odyssey": "<=1.0.0"
 	}
 }

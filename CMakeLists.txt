@@ -17,7 +17,9 @@ add_library(${PROJECT_NAME} SHARED ${SOURCES}
     src/hooks/GManager.cpp
     src/hooks/LocalLevelManager.cpp
     src/hooks/PauseLayer.cpp
-    src/hooks/EndLevelLayer.cpp)
+    src/hooks/EndLevelLayer.cpp
+    src/hooks/GameManager.cpp
+    src/hooks/GameStatsManager.cpp)
 
 if (NOT DEFINED ENV{GEODE_SDK})
     message(FATAL_ERROR "Unable to find Geode SDK! Please define GEODE_SDK environment variable to point to Geode")
