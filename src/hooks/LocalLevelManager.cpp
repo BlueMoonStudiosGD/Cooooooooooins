@@ -6,13 +6,16 @@ using namespace geode::prelude;
 
 class $modify(LocalLevelManager) {
 
-    gd::string getMainLevelString(int id) {
-        auto const path = fmt::format("tencoins-{}.txt"_spr, id);
+  gd::string getMainLevelString(int id) {
+    
+    auto path = Mod::get()->getResourcesDir() / fmt::format("tencoins-{}.txt", id);
 
-        if (auto content = CCString::createWithContentsOfFile(path.c_str())) {
-            return gd::string(content->getCString());
-        }
+    auto levelString = file::readString(path);
 
-        return LocalLevelManager::getMainLevelString(id);
+    if (levelString.isOk()) {
+      return gd::string(levelString.unwrap());
     }
+
+    return LocalLevelManager::getMainLevelString(id);
+  }
 };

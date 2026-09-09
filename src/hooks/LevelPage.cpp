@@ -18,8 +18,7 @@ class $modify(LevelPage) {
             }
         }
 
-        m_coins = CCArray::create();
-        m_coins->retain();
+        m_coins->removeAllObjects();
 
         CCPoint base = { m_levelDisplaySize.width - 16.f, 16.f };
 
