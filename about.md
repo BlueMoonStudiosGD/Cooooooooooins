@@ -10,7 +10,7 @@ It's so absurd, funny, and entertaining to watch that even when you're playing i
 
 Have fun with it! But before you install it, there are a few things you should know:
 
-- The mod creates <cf>separate stats</c> from the ones you have in the game, so don't be surprised if your account doesn't show up—just disable the mod and your stats will be restored
+- The mod creates <cf>separate stats</c> from the ones you have in the game, so don't be surprised if your account doesn't show up, just disable the mod and your stats will be restored
 
 - <cr>**YOU CANNOT LOG IN WITH YOUR ACCOUNT!**</c> This is due to the obvious use of a cheat that will be detected if you complete a level with <cy>10 coins</c>
 
