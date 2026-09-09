@@ -16,8 +16,6 @@ add_library(${PROJECT_NAME} SHARED ${SOURCES}
     src/hooks/LevelPage.cpp
     src/hooks/GManager.cpp
     src/hooks/LocalLevelManager.cpp
-    src/hooks/PauseLayer.cpp
-    src/hooks/EndLevelLayer.cpp
     src/hooks/GameManager.cpp
     src/hooks/GameStatsManager.cpp
     src/hooks/MenuLayer.cpp)
