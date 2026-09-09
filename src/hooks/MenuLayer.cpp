@@ -14,8 +14,13 @@ class $modify(MenuLayer) {
     auto menu = this->getChildByID("main-menu");
 
     if (menu) {
-      menu->removeChildByID("editor-button");
-      menu->updateLayout();
+      //menu->removeChildByID("editor-button");
+      auto grayFrame = CCSpriteGrayscale::createWithSpriteFrameName("GJ_creatorBtn_001.png");
+      auto editorBtn = typeinfo_cast<CCMenuItemSpriteExtra*>(menu->getChildByID("editor-button"));
+      if (editorBtn) {
+         editorBtn->setSprite(grayFrame);
+      }
+      
     }
 
     auto gsm = GameStatsManager::sharedState();
@@ -165,7 +170,19 @@ class $modify(MenuLayer) {
             }
           }),
           nullptr));
-          
+
     }
+  }
+
+  void onCreator(CCObject* sender) {
+
+    geode::createQuickPopup(
+        "Full Version Locked",
+        "You <cr>can't access</c> the full version options.\n\n"
+        "To prevent bans, your <cy>original data</c> and <cy>login access</c> have been <cy>temporarily removed</c> while the mod is active.\n\n"
+        "<cg>Don't worry!</c> Your data is <cg>safe!</c> Just <cl>disable the mod</c> to restore everything to normal.",
+        "OK",nullptr,nullptr
+    );
+   
   }
 };
