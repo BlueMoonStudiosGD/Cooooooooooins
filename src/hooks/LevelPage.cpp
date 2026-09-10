@@ -68,6 +68,10 @@ class $modify(LevelPage) {
                 this->addChild(sprite);
             }
 
+            if(auto secretCoin = this->getChildByID("secret-coin")) {
+                secretCoin->setPosition({418.f,239.f});
+            }
+            
             if (auto label = this->getChildByID("coming-soon-label")) {
                 label->setVisible(false);
             }

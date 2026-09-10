@@ -177,7 +177,7 @@ class $modify(MenuLayer) {
   void onCreator(CCObject* sender) {
 
     geode::createQuickPopup(
-        "Full Version Locked",
+         Mod::get()->getName().c_str(),
         "You <cr>can't access</c> the full version options.\n\n"
         "To prevent bans, your <cy>original data</c> and <cy>login access</c> have been <cy>temporarily removed</c> while the mod is active.\n\n"
         "<cg>Don't worry!</c> Your data is <cg>safe!</c> Just <cl>disable the mod</c> to restore everything to normal.",
