@@ -26,17 +26,17 @@ class $modify(GameManager) {
 
   void returnToLastScene(GJGameLevel *level) {
 
-    int levelID = PlayLayer::get()->m_level->m_levelID;
-
     auto director = CCDirector::sharedDirector();
 
-    int mainLevelIDs[10] = {1, 2, 3, 8, 13, 14, 17, 19, 20, 21};
+    //thanks slideglide for the recommendations!
+    
+    constexpr std::array<int, 10> mainLevelIDs = {1, 2, 3, 8, 13, 14, 17, 19, 20, 21};
 
-    for (int i = 0; i < 10; i++) {
-      if (mainLevelIDs[i] == levelID) {
+    for (int i = 0; i < mainLevelIDs.size(); i++) {
+      if (mainLevelIDs[i] == level->m_levelID) {
         director->replaceScene(
             CCTransitionFade::create(0.5f, LevelSelectLayer::scene(i)));
-        break;
+        return;
       }
     }
 

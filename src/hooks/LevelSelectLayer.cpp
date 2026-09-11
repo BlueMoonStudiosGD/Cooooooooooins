@@ -48,10 +48,10 @@ class $modify(LevelSelectLayer)
 	m_scrollLayer->m_dots->removeAllObjects();
 
 	
-	int mainLevelIDs[10] = { 1, 2, 3, 8, 13, 14, 17, 19, 20, 21 };
+	constexpr std::array<int, 10> mainLevelIDs = {1, 2, 3, 8, 13, 14, 17, 19, 20, 21};
 
 	auto GLM = GameLevelManager::sharedState();
-	for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < mainLevelIDs.size(); i++) {
 		auto level = GLM->getMainLevel(mainLevelIDs[i], true);
 		m_scrollLayer->m_dynamicObjects->addObject(level);
 	}
